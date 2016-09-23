@@ -3,7 +3,16 @@ sys.path.insert(0,"/home/")
 print("Welcome to Lolex Square Numbers For Android v1.1 CODENAME:because_life_can_get_hard_at_times update.")
 try:
     import squarenumber
-except(ImportError):
+    squarenumbers = squarenumber.squarenumbers
+    originsquare = squarenumber.originsquare
+except(ImportError, AttributeError):
+    try:
+     try:
+      os.remove("squarenumber.py")
+     except(FileNotFoundError):
+      pass
+    except(NameError):
+     pass
     with open ("/home/squarenumber.py","a") as f: f.write("squarenumbers = 2\noriginsquare = 2")
 import squarenumber
 squarenumbers = squarenumber.squarenumbers
@@ -27,8 +36,9 @@ while True:
         with open ("/home/squarenumber.py","a") as outf: outf.write(str(originsquare))
         gone = 0
         gonecon = gonecon + 1000
-        if gonecon == 100000:
+        if gonecon == 100000 and squarecont == 1:
             continuer = int(input("Do you wish to continue? Please enter 0 if you DON'T."))
+            gonecon = 0
             if continuer == 0:
                 exit()
 
