@@ -1,6 +1,6 @@
 import sys,os,subprocess,io,time
 sys.path.insert(0,"/home/")
-print("Welcome to Lolex Square Numbers For Android v1.1 CODENAME:because_life_can_get_hard_at_times update.")
+print("Welcome to Lolex Square Numbers For Linux v1.1 CODENAME:because_life_can_get_hard_at_times update.")
 try:
     import squarenumber
     squarenumbers = squarenumber.squarenumbers
